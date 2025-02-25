@@ -60,7 +60,7 @@ int at(Vector *v, int index);
  * @brief Pops the last element of the vector
  *
  * @param v
- * @return int the element returned
+ * @return int if successful, ERROR - if not
  */
 int pop(Vector *v);
 
@@ -83,7 +83,7 @@ void pushFront(Vector *v, int number);
  * @brief Pops the first element of the vector
  *
  * @param v
- * @return int
+ * @return int if successful, ERROR - if not
  */
 int popFront(Vector *v);
 
@@ -93,7 +93,7 @@ int popFront(Vector *v);
  * @param v
  * @param index
  * @param number
- * @return int
+ * @return int 0 if successful, ERROR - if not
  */
 int insert(Vector *v, int index, int number);
 
@@ -103,18 +103,18 @@ int insert(Vector *v, int index, int number);
  * @param v
  * @param index
  * @param number
- * @return int
+ * @return int the number if usccesful, ERROR - if not
  */
-int remove(Vector *v, int index, int number);
+int remove(Vector *v, int index);
 
-int main()
-{
-    Vector *v = initVector();
-    // pushBack(v, 2);
-    // pushBack(v, 3);
-    print(v);
-    return 0;
-}
+// int main()
+// {
+//     Vector *v = initVector();
+//     // pushBack(v, 2);
+//     // pushBack(v, 3);
+//     print(v);
+//     return 0;
+// }
 
 struct vector_t *initVector()
 {
@@ -150,7 +150,7 @@ void resize(Vector *v)
 void print(Vector *v)
 {
     cout << "Vector's size: " << v->size << endl;
-    cout << "Vector's size: " << v->capacity << endl;
+    cout << "Vector's capacity: " << v->capacity << endl;
     cout << "Vector's data: [";
 
     if (v->size > 0)
@@ -162,4 +162,4 @@ void print(Vector *v)
     cout << "]" << endl;
 }
 
-//////////////////////////////
+
