@@ -24,6 +24,8 @@ using namespace std;
 
 // Constructor can be triggered by the keyword new
 // Destructor can be triggered by the keyword delete
+
+// this keyword is a pointer to the object itself.
 ///////////////////////////////////
 
 /// @brief Use this class to check when the constructor and destructor are called
